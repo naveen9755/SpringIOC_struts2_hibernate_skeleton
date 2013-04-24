@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="jeevirgin" extends="struts-default" namespace="/">
+
+		<action name="">
+			<result type="redirectAction">index</result>
+		</action>
+
+		<action name="index" method="index"
+			class="com.foo.jason.controller.IndexStruts">
+			<result name="SUCCESS">/WEB-INF/jsp/Index.jsp</result>
+		</action>
+
+		<action name="addUser" method="addUser"
+			class="com.foo.jason.controller.IndexStruts">
+			<result name="SUCCESS" type="redirectAction">index</result>
+		</action>
+
+		<action name="deleteUser" method="deleteUser"
+			class="com.foo.jason.controller.IndexStruts">
+			<result name="SUCCESS" type="redirectAction">index</result>
+		</action>
+
+	</package>
+</struts>
